@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .clients--table {
+        @apply w-full border-collapse border border-slate-500;
+    }
+
+    .clients--table thead th {
+        @apply border border-slate-500 py-2;
+    }
+
+    .clients--table thead th:first-child {
+        @apply w-1/20;
+    }
+
+    .clients--table thead th:last-child {
+        @apply w-3/20;
+    }
+
+    .clients--table thead th:not(:first-child, :last-child) {
+        @apply w-1/5;
+    }
+
+    .clients--table tbody td {
+        @apply border border-slate-500;
+    }
+
+    .clients--table tbody td:first-child {
+        @apply text-center;
+    }
+
+    .clients--table tbody td:not(:first-child) {
+        @apply pl-2;
+    }
+
+    .action--btn {
+        @apply focus:outline-none focus:ring text-sm text-cyan-50 rounded-lg px-4;
+    }
+
+    .add--btn {
+        @apply bg-green-600 hover:bg-green-700 focus:ring-green-400 text-lg text-cyan-50 px-2 py-1 rounded-lg;
+    }
+
+    .btn--blue {
+        @apply bg-blue-600 hover:bg-blue-700 focus:ring-blue-400;
+    }
+
+    .btn--red {
+        @apply bg-red-600 hover:bg-red-700 focus:ring-red-400;
+    }
+
+    .create--client--form {
+        @apply w-4/5;
+    }
+
+    .create--client--form div:not(:last-child) {
+        @apply my-2 flex justify-between;
+    }
+
+    .create--client--form div label {
+        @apply w-3/20 text-lg font-medium text-gray-600;
+    }
+
+    .create--client--form div input {
+        @apply w-4/5 px-2 font-medium border-solid border border-violet-800 focus:outline-violet-800 rounded-md;
+    }
+
+    .create--client--form div:last-child {
+        @apply my-2 flex justify-center;
+    }
+
+    .create--client--form div:last-child button {
+        @apply text-base text-cyan-50 bg-green-600 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 p-2 rounded-md;
+    }
+}
